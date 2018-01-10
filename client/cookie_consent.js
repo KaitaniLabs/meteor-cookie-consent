@@ -49,6 +49,11 @@ Template.cookieConsent.onCreated(function() {
   this.cookieStatus.set(cookies.get('cookie-consent'));
 });
 
+Template.cookieConsentImply.onCreated(function() {
+  this.cookieStatus = new ReactiveVar();
+  this.cookieStatus.set(cookies.get('cookie-consent'));
+});
+
 Template.cookieConsent.helpers(helpers);
 
 Template.cookieConsentImply.helpers(helpers);

@@ -2,10 +2,12 @@
 
 Create easily a fully customizable bootstrap EU Law (imply) Cookie consent banner for your website.
 
+For of ``selaias:cookie-consent``.
+
 ## Install
 
 ```js
-$ meteor add selaias:cookie-consent
+$ meteor add allerion:meteor-cookie-consent
 ```
 
 This packages makes also use of cookies via the `chuangbo:cookie` package.
