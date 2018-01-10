@@ -1,19 +1,21 @@
 Package.describe({
   name: 'allerion:meteor-cookie-consent',
-  version: '0.0.2',
-  // Brief, one-line summary of the package.
-  summary: '',
-  // URL to the Git repository containing the source code for this package.
-  git: '',
-  // By default, Meteor will default to using README.md for documentation.
-  // To avoid submitting documentation, set this field to null.
+  version: '0.0.3',
+  summary: 'Fork of selaias:cookie-consent package.',
+  git: 'https://github.com/KaitaniLabs/meteor-cookie-consent.git',
   documentation: 'README.md'
 });
 
 Package.onUse(function(api) {
   api.versionsFrom('1.6.0.1');
   api.use('ecmascript');
-  api.mainModule('meteor-cookie-consent.js');
+  api.use('templating@1.3.2', 'client');
+  api.addFiles([
+    'client/cookie_consent.html',
+    'client/cookie_consent.js',
+    'client/cookie_consent.css',
+    'meteor-cookie-consent.js',
+  ], 'client');
 });
 
 Package.onTest(function(api) {
